@@ -13,6 +13,8 @@ namespace Mono_Game_lesson
         Rectangle window;
 
         Texture2D dinoTexture;
+        Texture2D giraffeTexture;
+
 
         public Game1()
         {
@@ -40,6 +42,7 @@ namespace Mono_Game_lesson
 
             // TODO: use this.Content to load your game content here
             dinoTexture = Content.Load<Texture2D>("dino");
+            giraffeTexture = Content.Load<Texture2D>("giraffe");
         }
 
         protected override void Update(GameTime gameTime)
@@ -60,6 +63,9 @@ namespace Mono_Game_lesson
             _spriteBatch.Begin();
 
             _spriteBatch.Draw(dinoTexture,new Vector2(400, 300), Color.White);
+            _spriteBatch.Draw(giraffeTexture,new Vector2(10,10), Color.White);
+            _spriteBatch.Draw(giraffeTexture, new Vector2(100, 10), Color.White);
+
 
             _spriteBatch.End();
 
