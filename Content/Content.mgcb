@@ -37,3 +37,8 @@
 /processorParam:TextureFormat=Color
 /build:giraffe.png
 
+#begin monkey
+/importer:
+/processor:
+/build:monkey
+
