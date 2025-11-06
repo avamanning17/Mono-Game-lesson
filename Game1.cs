@@ -12,10 +12,12 @@ namespace Mono_Game_lesson
 
         Rectangle window;
 
-        Texture2D dinoTexture;
+        Texture2D zooTexture;
         Texture2D giraffeTexture;
         Texture2D monkeyTexture;
-
+        Texture2D polarBearTexture;
+        Texture2D tigerTexture;
+        Texture2D blueBirdTexture;
 
         public Game1()
         {
@@ -42,10 +44,15 @@ namespace Mono_Game_lesson
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            dinoTexture = Content.Load<Texture2D>("dino");
+
+            zooTexture = Content.Load<Texture2D>("zoo");
             giraffeTexture = Content.Load<Texture2D>("giraffe");
             monkeyTexture = Content.Load<Texture2D>("monkey");
+            polarBearTexture = Content.Load<Texture2D>("polarbear");
+            tigerTexture = Content.Load<Texture2D>("tiger");
+            blueBirdTexture = Content.Load<Texture2D>("bird");
         }
+        
 
         protected override void Update(GameTime gameTime)
         {
@@ -64,10 +71,12 @@ namespace Mono_Game_lesson
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
 
-            _spriteBatch.Draw(dinoTexture,new Vector2(400, 300), Color.White);
-            _spriteBatch.Draw(giraffeTexture,new Vector2(10,10), Color.White);
-            _spriteBatch.Draw(monkeyTexture, new Vector2(10, 300), Color.White);
-
+            _spriteBatch.Draw(zooTexture, new Vector2(0, 0), Color.White);
+            _spriteBatch.Draw(giraffeTexture,new Vector2(300,400), Color.White);
+            _spriteBatch.Draw(monkeyTexture, new Vector2(10, 350), Color.White);
+            _spriteBatch.Draw(polarBearTexture, new Vector2(600, 300), Color.White);
+            _spriteBatch.Draw(tigerTexture, new Vector2(400, 300), Color.White);
+            _spriteBatch.Draw(blueBirdTexture, new Vector2(400, 10), Color.White);
 
             _spriteBatch.End();
 
